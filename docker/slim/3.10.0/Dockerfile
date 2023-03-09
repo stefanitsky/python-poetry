@@ -13,8 +13,8 @@ ENV PYTHONUNBUFFERED=1 \
     POETRY_HOME=/usr/local/bin \
     VENV_PATH=/venv
 
-RUN addgroup --gid 10001 nonroot && \
-    adduser --uid 10000 --system --home /home/nonroot nonroot && \
+RUN addgroup --gid 1000 nonroot && \
+    adduser --uid 1000 --system --home /home/nonroot nonroot && \
     usermod -g nonroot nonroot
 
 RUN apt-get update && \
